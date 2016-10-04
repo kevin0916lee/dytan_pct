@@ -1,0 +1,5 @@
+#!/bin/bash
+cd ~/software/dytan
+rm -f obj-intel64/dytan.o
+#make PIN_ROOT=/home/xdzhang/work/dytan/pin-3.0 DEBUG=1
+make PIN_ROOT=/home/xdzhang/work/dytan/pin-2.14-71313-gcc.4.4.7-linux DEBUG=1

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+PROG=$@
+
+if [ $# == 0 ]; then
+    echo "Usage"
+    echo "$0 <command line>"
+    exit
+fi
+
+#PINHOME=/home/xdzhang/work/dytan/pin-3.0
+PINHOME=/home/xdzhang/work/dytan/pin-2.14-71313-gcc.4.4.7-linux
+DYTAN=/home/xdzhang/work/dytan/obj-intel64
+$PINHOME/pin -t $DYTAN/dytan -injection child -- $PROG
