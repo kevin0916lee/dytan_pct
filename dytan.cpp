@@ -52,6 +52,7 @@
 #include "include/taint_source_func.h"
 #include "include/struct_dat.h"
 //#include <ofstream>
+#include "PCTScheduling.h"
 
 map<REG, bitset *> regTaintMap;
 map<ADDRINT, bitset *> memTaintMap;
@@ -1118,6 +1119,11 @@ int main(int argc, char **argv) {
 
 	PIN_InitSymbols();
 	PIN_Init(argc, argv);
+	/*
+	 * Adding PCT scheduling Instrumentation
+	 *
+	 */
+	INS_AddInstrumentFunction(PCTScheduling,0);
 
 	/*
 	 SyscallMonitor takes care of the dirty work of handling system calls
