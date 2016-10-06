@@ -9,6 +9,6 @@ if [ $# == 0 ]; then
 fi
 
 #PINHOME=/home/xdzhang/work/dytan/pin-3.0
-PINHOME=/home/xdzhang/work/dytan/pin-2.14-71313-gcc.4.4.7-linux
-DYTAN=/home/xdzhang/work/dytan/obj-intel64
-$PINHOME/pin -t $DYTAN/dytan -injection child -- $PROG
+PINHOME=/home/lihao/dytan_pct/pin-2.14-71313-gcc.4.4.7-linux
+DYTAN=/home/lihao/dytan_pct/obj-intel64
+$PINHOME/intel64/bin/pinbin -t $DYTAN/dytan -injection child -- $PROG
